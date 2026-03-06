@@ -75,7 +75,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#f5f5f5] selection:bg-brand-navy selection:text-white flex flex-col">
-      {currentPage !== 'links' && <Navigation onNavigate={navigateTo} />}
+      {currentPage !== 'links' && <Navigation onNavigate={navigateTo} darkBackground={currentPage === 'webinar'} />}
       <main className="flex-grow">
         {renderPage()}
       </main>

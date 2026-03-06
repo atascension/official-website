@@ -4,6 +4,7 @@ import { Page } from '../App';
 
 interface NavigationProps {
   onNavigate: (page: Page) => void;
+  darkBackground?: boolean;
 }
 
 const scrollToSection = (id: string) => {
@@ -13,7 +14,7 @@ const scrollToSection = (id: string) => {
   }
 };
 
-export const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
+export const Navigation: React.FC<NavigationProps> = ({ onNavigate, darkBackground = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -45,7 +46,15 @@ export const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || mobileMenuOpen ? 'glass-nav py-4 shadow-sm' : 'bg-transparent py-8'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled || mobileMenuOpen
+        ? darkBackground
+          ? 'bg-brand-navy/90 backdrop-blur-md py-4'
+          : 'glass-nav py-4 shadow-sm'
+        : darkBackground
+          ? 'bg-brand-navy/40 backdrop-blur-md py-8'
+          : 'bg-transparent py-8'
+    }`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
         <button
@@ -55,7 +64,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
           <img
             src={`${import.meta.env.BASE_URL}img/Brand-Logo-With-title.svg`}
             alt="Architech Ascension"
-            className="h-[3.5rem] md:h-[4.5rem] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className={`h-[3.5rem] md:h-[4.5rem] w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${darkBackground ? 'brightness-0 invert' : ''}`}
           />
         </button>
 
@@ -65,7 +74,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
             <button
               key={link.sectionId}
               onClick={() => handleNavClick(link.sectionId)}
-              className="nav-link-underline text-sm font-medium text-brand-navy/70 hover:text-brand-navy transition-colors focus:outline-none"
+              className={`nav-link-underline text-sm font-medium transition-colors focus:outline-none ${darkBackground ? 'text-white/80 hover:text-white' : 'text-brand-navy/70 hover:text-brand-navy'}`}
             >
               {link.label}
             </button>
@@ -73,14 +82,14 @@ export const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
           {/* Webinar page link */}
           <button
             onClick={() => { onNavigate('webinar'); setMobileMenuOpen(false); }}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-xs font-semibold text-brand-navy hover:bg-brand-gold/25 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-gold/50"
+            className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full border text-xs font-semibold transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-gold/50 ${darkBackground ? 'bg-brand-gold/15 border-brand-gold/40 text-white hover:bg-brand-gold/25' : 'bg-brand-gold/15 border-brand-gold/40 text-brand-navy hover:bg-brand-gold/25'}`}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
             Free Webinar
           </button>
           <button
             onClick={handleBookCall}
-            className="px-5 py-2.5 bg-brand-navy text-white text-xs font-semibold tracking-wide rounded-full hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg focus:outline-none"
+            className={`px-5 py-2.5 text-white text-xs font-semibold tracking-wide rounded-full transition-all focus:outline-none ${darkBackground ? 'bg-white/15 border border-white/30 hover:bg-white/25' : 'bg-brand-navy shadow-md hover:shadow-lg hover:bg-opacity-90'}`}
           >
             Book a Call
           </button>
@@ -88,7 +97,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
 
         {/* Mobile Toggle */}
         <div className="md:hidden">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-brand-navy focus:outline-none">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className={`focus:outline-none ${darkBackground ? 'text-white' : 'text-brand-navy'}`}>
             {mobileMenuOpen ? <X /> : <Menu />}
           </button>
         </div>

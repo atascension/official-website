@@ -46,7 +46,7 @@ const CountdownCard: React.FC<{ value: number; label: string }> = ({ value, labe
         {String(value).padStart(2, '0')}
       </span>
     </div>
-    <span className="mt-3 text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/60">
+    <span className="mt-3 text-xs sm:text-sm font-semibold uppercase tracking-widest text-white">
       {label}
     </span>
   </div>
@@ -95,7 +95,7 @@ const HeroSection: React.FC = () => {
 
         {/* Subheadline */}
         <p
-          className={`text-lg sm:text-xl text-white/75 max-w-2xl mx-auto mb-12 leading-relaxed transition-all duration-700 delay-200 ${
+          className={`text-lg sm:text-xl text-white max-w-2xl mx-auto mb-12 leading-relaxed transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
@@ -135,7 +135,7 @@ const HeroSection: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <p className="mt-4 text-xs text-white/45 tracking-wide">100% Free &bull; No credit card required</p>
+          <p className="mt-4 text-xs text-white/60 tracking-wide">100% Free &bull; No credit card required</p>
         </div>
       </div>
     </section>
@@ -195,7 +195,7 @@ const WhatYoullLearnSection: React.FC = () => {
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white font-semibold tracking-tight leading-tight">
             What You'll Walk Away With
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-white/70 max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-white max-w-xl mx-auto leading-relaxed">
             A proven, step-by-step system for building websites with AI — from concept to launch.
           </p>
         </div>
@@ -217,7 +217,7 @@ const WhatYoullLearnSection: React.FC = () => {
                 <h3 className="font-heading text-lg md:text-xl text-white font-semibold mb-2">
                   {step.title}
                 </h3>
-                <p className="text-white/75 text-sm md:text-base leading-relaxed">
+                <p className="text-white text-sm md:text-base leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -264,7 +264,7 @@ const HostSection: React.FC = () => {
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-white font-semibold mb-4 leading-tight">
               Architech Ascension
             </h2>
-            <p className="text-white/75 text-sm md:text-base leading-relaxed max-w-lg">
+            <p className="text-white text-sm md:text-base leading-relaxed max-w-lg">
               Architech Ascension helps entrepreneurs and agencies build smarter, faster, and more
               profitably using the latest AI-powered tools and systems. We're dedicated to giving you
               the frameworks, skills, and confidence to thrive in an AI-driven world.
@@ -273,7 +273,7 @@ const HostSection: React.FC = () => {
               {['AI Strategy', 'Web Development', 'Business Systems', 'Automation'].map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs font-semibold px-3 py-1.5 rounded-full border border-brand-gold/25 text-brand-gold/70 bg-brand-gold/8"
+                  className="text-xs font-semibold px-3 py-1.5 rounded-full border border-brand-gold/40 text-brand-gold bg-brand-gold/10"
                 >
                   {tag}
                 </span>
@@ -306,7 +306,7 @@ const RegisterSection: React.FC = () => {
         <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white font-semibold leading-tight mb-6">
           Ready to Build Smarter?
         </h2>
-        <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-10">
+        <p className="text-white text-base sm:text-lg leading-relaxed mb-10">
           Secure your free spot today. Seats are limited — don't miss your chance to get the
           complete 5-step system live.
         </p>
@@ -323,7 +323,7 @@ const RegisterSection: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
-        <p className="mt-4 text-xs text-white/45 tracking-wide">100% Free &bull; No credit card required</p>
+        <p className="mt-4 text-xs text-white/60 tracking-wide">100% Free &bull; No credit card required</p>
       </div>
     </section>
   );
@@ -332,7 +332,7 @@ const RegisterSection: React.FC = () => {
 // ─── Page Footer ──────────────────────────────────────────────────────────────
 
 const WebinarFooter: React.FC<{ onNavigate: (page: Page) => void }> = ({ onNavigate }) => (
-  <footer className="relative bg-brand-navy border-t border-white/8 py-10 overflow-hidden">
+  <footer className="relative bg-brand-navy py-10 overflow-hidden">
     <div
       aria-hidden="true"
       className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -353,7 +353,7 @@ const WebinarFooter: React.FC<{ onNavigate: (page: Page) => void }> = ({ onNavig
           className="h-10 w-auto object-contain opacity-40 hover:opacity-80 transition-opacity duration-200 brightness-0 invert"
         />
       </button>
-      <p className="text-xs text-white/30 text-center md:text-center">
+      <p className="text-xs text-white/60 text-center md:text-center">
         &copy; {new Date().getFullYear()} Architech Ascension. All rights reserved.
       </p>
       <div className="flex items-center gap-5">
@@ -361,7 +361,7 @@ const WebinarFooter: React.FC<{ onNavigate: (page: Page) => void }> = ({ onNavig
           <button
             key={p}
             onClick={() => onNavigate(p)}
-            className="text-xs text-white/30 hover:text-white/70 transition-colors duration-200 capitalize cursor-pointer focus:outline-none"
+            className="text-xs text-white/60 hover:text-white transition-colors duration-200 capitalize cursor-pointer focus:outline-none"
           >
             {p === 'refund' ? 'Refund Policy' : p.charAt(0).toUpperCase() + p.slice(1)}
           </button>
