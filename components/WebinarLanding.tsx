@@ -243,13 +243,13 @@ const HostSection: React.FC = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          {/* Logo box */}
+          {/* Profile photo */}
           <div className="shrink-0">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white/90 flex items-center justify-center border border-brand-gold/20">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl border-2 border-brand-gray/50 overflow-hidden bg-white">
               <img
-                src={`${import.meta.env.BASE_URL}img/Brand-Logo-With-title.svg`}
-                alt="Architech Ascension logo"
-                className="w-24 md:w-32 object-contain"
+                src={`${import.meta.env.BASE_URL}img/headshot.svg`}
+                alt="Robert Morgan"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -262,7 +262,7 @@ const HostSection: React.FC = () => {
               </span>
             </div>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-white font-semibold mb-4 leading-tight">
-              Architech Ascension
+              Robert Morgan
             </h2>
             <p className="text-white text-sm md:text-base leading-relaxed max-w-lg">
               Architech Ascension helps entrepreneurs and agencies build smarter, faster, and more
