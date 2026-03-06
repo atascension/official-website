@@ -5,8 +5,9 @@ import { Privacy } from './components/Privacy';
 import { Terms } from './components/Terms';
 import { Refund } from './components/Refund';
 import { SocialLinks } from './components/SocialLinks';
+import { WebinarLanding } from './components/WebinarLanding';
 
-export type Page = 'home' | 'privacy' | 'terms' | 'refund' | 'links';
+export type Page = 'home' | 'privacy' | 'terms' | 'refund' | 'links' | 'webinar';
 
 const App: React.FC = () => {
   const pageToPath: Record<Page, string> = {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
     terms: '/terms',
     refund: '/refund',
     links: '/links',
+    webinar: '/webinar',
   };
 
   const normalizePath = (path: string) => {
@@ -64,6 +66,8 @@ const App: React.FC = () => {
         return <Refund />;
       case 'links':
         return <SocialLinks onNavigate={navigateTo} />;
+      case 'webinar':
+        return <WebinarLanding onNavigate={navigateTo} />;
       default:
         return <LandingPage onNavigate={navigateTo} />;
     }

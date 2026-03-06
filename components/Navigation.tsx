@@ -70,6 +70,14 @@ export const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
               {link.label}
             </button>
           ))}
+          {/* Webinar page link */}
+          <button
+            onClick={() => { onNavigate('webinar'); setMobileMenuOpen(false); }}
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-xs font-semibold text-brand-navy hover:bg-brand-gold/25 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-gold/50"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
+            Free Webinar
+          </button>
           <button
             onClick={handleBookCall}
             className="px-5 py-2.5 bg-brand-navy text-white text-xs font-semibold tracking-wide rounded-full hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg focus:outline-none"
@@ -98,6 +106,13 @@ export const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
               {link.label}
             </button>
           ))}
+          <button
+            onClick={() => { onNavigate('webinar'); setMobileMenuOpen(false); }}
+            className="inline-flex items-center gap-2 text-base font-semibold text-brand-gold text-left cursor-pointer focus:outline-none"
+          >
+            <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse" />
+            Free Webinar — Mar 18
+          </button>
           <button
             onClick={handleBookCall}
             className="text-base font-medium text-brand-gold text-left"
