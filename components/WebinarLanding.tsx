@@ -41,12 +41,12 @@ function getTimeLeft() {
 
 const CountdownCard: React.FC<{ value: number; label: string }> = ({ value, label }) => (
   <div className="flex flex-col items-center">
-    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl bg-white/8 border border-brand-gold/30 flex items-center justify-center backdrop-blur-sm">
-      <span className="font-heading text-3xl sm:text-4xl md:text-5xl text-brand-gold font-semibold tabular-nums leading-none">
+    <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 rounded-2xl bg-white/8 border border-brand-gold/30 flex items-center justify-center backdrop-blur-sm">
+      <span className="font-heading text-2xl sm:text-3xl md:text-5xl text-brand-gold font-semibold tabular-nums leading-none">
         {String(value).padStart(2, '0')}
       </span>
     </div>
-    <span className="mt-3 text-xs sm:text-sm font-semibold uppercase tracking-widest text-white">
+    <span className="mt-2 sm:mt-3 text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white">
       {label}
     </span>
   </div>
@@ -66,7 +66,7 @@ const HeroSection: React.FC = () => {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen bg-brand-navy flex flex-col items-center justify-center pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden"
+      className="relative min-h-screen bg-brand-navy flex flex-col items-center justify-center pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden"
     >
       {BG_GLOW}
 
@@ -108,13 +108,13 @@ const HeroSection: React.FC = () => {
           {timeLeft.ended ? (
             <p className="text-brand-gold font-heading text-2xl">The webinar has started!</p>
           ) : (
-            <div className="flex items-start justify-center gap-4 sm:gap-6 md:gap-8">
+            <div className="flex items-start justify-center gap-1.5 sm:gap-4 md:gap-8">
               <CountdownCard value={timeLeft.days} label="Days" />
-              <div className="text-brand-gold/40 font-heading text-4xl sm:text-5xl mt-5">:</div>
+              <div className="text-brand-gold/40 font-heading text-2xl sm:text-4xl md:text-5xl mt-3 sm:mt-5">:</div>
               <CountdownCard value={timeLeft.hours} label="Hours" />
-              <div className="text-brand-gold/40 font-heading text-4xl sm:text-5xl mt-5">:</div>
+              <div className="text-brand-gold/40 font-heading text-2xl sm:text-4xl md:text-5xl mt-3 sm:mt-5">:</div>
               <CountdownCard value={timeLeft.minutes} label="Minutes" />
-              <div className="text-brand-gold/40 font-heading text-4xl sm:text-5xl mt-5">:</div>
+              <div className="text-brand-gold/40 font-heading text-2xl sm:text-4xl md:text-5xl mt-3 sm:mt-5">:</div>
               <CountdownCard value={timeLeft.seconds} label="Seconds" />
             </div>
           )}
