@@ -147,33 +147,33 @@ const HeroSection: React.FC = () => {
 const STEPS = [
   {
     number: '01',
-    title: 'Define Your Vision with AI',
+    title: 'Define Your Website\'s Vision',
     description:
-      'Use AI-powered prompting techniques to transform a rough idea into a clear, structured website brief — in minutes, not hours.',
+      'Get crystal clear on who your site is for, what it needs to say, and what you want visitors to do. A sharp vision is what separates a website that works from one that just exists.',
   },
   {
     number: '02',
-    title: 'Architect the Structure',
+    title: 'Turn That Vision Into an AI Prompt',
     description:
-      'Map out pages, sections, and user flows using AI as your co-architect. Build a site blueprint your clients will love.',
+      'Learn how to translate your ideas into a prompt that tells AI exactly what to build. The right prompt is the difference between a generic template and a site that actually sounds like your business.',
   },
   {
     number: '03',
-    title: 'Design at AI Speed',
+    title: 'Generate the First Version of Your Website',
     description:
-      'Generate on-brand designs and UI components instantly. Learn how to direct AI to match any client aesthetic.',
+      'Watch your website come to life in seconds — real pages, real copy, real design. You\'ll have a working first draft before most people finish writing a brief.',
   },
   {
     number: '04',
-    title: 'Build & Integrate Fast',
+    title: 'Review, Refine, and Iterate Section by Section',
     description:
-      'Turn designs into functional websites faster than ever. Connect third-party tools, forms, and automations with ease.',
+      'Go through your site piece by piece and dial it in. You\'ll know exactly what to adjust and how to guide AI to get it right — no guessing, no wasted revisions.',
   },
   {
     number: '05',
-    title: 'Launch, Deliver & Scale',
+    title: 'Deploy Your Website',
     description:
-      'Master the delivery process — from QA to handoff. Build a repeatable system that scales your business without scaling your hours.',
+      'Take your finished site live with a few clicks. Professional, polished, and ready to bring in customers — without touching a line of code.',
   },
 ];
 
@@ -193,10 +193,10 @@ const WhatYoullLearnSection: React.FC = () => {
             </span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white font-semibold tracking-tight leading-tight">
-            What You'll Walk Away With
+            From Idea to Live Website —<br className="hidden sm:block" /> Five Steps, Zero Code
           </h2>
           <p className="mt-4 text-base sm:text-lg text-white max-w-xl mx-auto leading-relaxed">
-            A proven, step-by-step system for building websites with AI — from concept to launch.
+            No developers. No design tools. No months of back-and-forth. Just a clear system that takes you from blank page to live site — and we walk through every step together.
           </p>
         </div>
 
@@ -265,9 +265,7 @@ const HostSection: React.FC = () => {
               Robert Morgan
             </h2>
             <p className="text-white text-sm md:text-base leading-relaxed max-w-lg">
-              Architech Ascension helps entrepreneurs and agencies build smarter, faster, and more
-              profitably using the latest AI-powered tools and systems. We're dedicated to giving you
-              the frameworks, skills, and confidence to thrive in an AI-driven world.
+              Robert is an entrepreneur with a degree in Information Technology from the University of South Florida, giving him a natural edge when it comes to picking up new tools and technologies. His mission is to equip this generation with the knowledge and skills to confidently adapt and thrive in today's rapidly evolving AI landscape.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               {['AI Strategy', 'Web Development', 'Business Systems', 'Automation'].map((tag) => (
