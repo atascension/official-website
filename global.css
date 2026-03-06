@@ -1,0 +1,210 @@
+/* Global theme styles */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Technor';
+  src: url('./fonts/Technor-Semibold.otf') format('opentype');
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Supreme';
+  src: url('./fonts/Supreme-Regular.otf') format('opentype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family-heading: 'Technor', 'Supreme', sans-serif;
+  --font-family-body: 'Supreme', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-brand-navy: #0b234b;
+  --color-brand-gold: #e0b344;
+  --color-brand-white: #f5f5f5;
+  --color-brand-surface: #ffffff;
+  --color-brand-gray: #b8b8b8;
+
+  --color-bg: var(--color-brand-white);
+  --color-surface: var(--color-brand-surface);
+  --color-text-primary: var(--color-brand-navy);
+  --color-text-secondary: #4f596d;
+  --color-text-muted: var(--color-brand-gray);
+
+  --type-display: clamp(3rem, 2rem + 2vw, 4.5rem);
+  --type-h1: clamp(2.25rem, 1.6rem + 1vw, 3.25rem);
+  --type-h2: clamp(1.875rem, 1.35rem + 0.8vw, 2.5rem);
+  --type-h3: clamp(1.5rem, 1.2rem + 0.6vw, 1.875rem);
+  --type-h4: 1.25rem;
+  --type-body: 1rem;
+  --type-small: 0.9375rem;
+  --type-xs: 0.875rem;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.25;
+  --line-height-relaxed: 1.6;
+
+  --shadow-premium: 0 20px 40px -12px rgba(11, 35, 75, 0.06);
+  --shadow-premium-hover: 0 30px 60px -12px rgba(11, 35, 75, 0.12);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--type-body);
+  line-height: var(--line-height-relaxed);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.75em;
+  font-family: var(--font-family-heading);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: var(--type-display); }
+h2 { font-size: var(--type-h1); }
+h3 { font-size: var(--type-h2); }
+h4 { font-size: var(--type-h3); }
+h5 { font-size: var(--type-h4); }
+h6 { font-size: var(--type-small); }
+
+p {
+  margin: 0 0 1em;
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-brand-gold);
+}
+
+::selection {
+  background: var(--color-brand-navy);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: var(--color-brand-navy);
+  color: #ffffff;
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes glow-soft {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+.animate-soft-float { animation: float-slow 10s ease-in-out infinite; }
+.animate-soft-glow { animation: glow-soft 8s ease-in-out infinite; }
+
+@keyframes caret-blink {
+  0%, 45% { opacity: 1; }
+  55%, 100% { opacity: 0; }
+}
+
+.caret-blink {
+  animation: caret-blink 1s step-start infinite;
+}
+
+/* Mobile menu slide-down */
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.2s ease both;
+}
+
+/* Nav link hover underline */
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--color-brand-navy);
+  transition: width 0.25s ease;
+}
+
+.nav-link-underline:hover::after {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-soft-float,
+  .animate-soft-glow,
+  .caret-blink,
+  .animate-slide-down {
+    animation: none !important;
+  }
+
+  .nav-link-underline::after {
+    transition: none !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-navy);
+}
+
+.glass-nav {
+  background: rgba(245, 245, 245, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

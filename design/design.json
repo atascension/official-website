@@ -1,0 +1,128 @@
+{
+  "name": "Architech Ascension Design System",
+  "version": "1.0.0",
+  "description": "Source of truth for colors, typography, motion, spacing, and component patterns across all apps.",
+  "tokens": {
+    "colors": [
+      { "token": "brand.navy", "value": "#0b234b", "usage": "Primary text, buttons, headings, icons, overlays" },
+      { "token": "brand.gold", "value": "#e0b344", "usage": "Accents, tags, callouts, animated highlights" },
+      { "token": "brand.white", "value": "#f5f5f5", "usage": "Page background, light gradients, scrollbar track" },
+      { "token": "brand.surface", "value": "#ffffff", "usage": "Cards, nav bar, modals, form shells" },
+      { "token": "brand.gray", "value": "#b8b8b8", "usage": "Muted text, borders, dividers, scrollbar thumb" },
+      { "token": "text.secondary", "value": "#4f596d", "usage": "Body copy on light backgrounds" }
+    ],
+    "typography": {
+      "headings": { "font": "Technor, Supreme, sans-serif", "weightRange": "500-700", "letterSpacing": "-0.01em" },
+      "body": { "font": "Supreme, system-ui, -apple-system, 'Segoe UI', sans-serif" },
+      "scale": {
+        "display": "clamp(3rem, 2rem + 2vw, 4.5rem)",
+        "h1": "clamp(2.25rem, 1.6rem + 1vw, 3.25rem)",
+        "h2": "clamp(1.875rem, 1.35rem + 0.8vw, 2.5rem)",
+        "h3": "clamp(1.5rem, 1.2rem + 0.6vw, 1.875rem)",
+        "h4": "1.25rem",
+        "body": "1rem",
+        "small": "0.9375rem",
+        "xs": "0.875rem"
+      },
+      "lineHeights": { "tight": 1.1, "snug": 1.25, "relaxed": 1.6 },
+      "uppercaseBadges": { "tracking": "0.08em-0.1em", "weight": "bold" }
+    },
+    "effects": {
+      "shadows": {
+        "base": "0 20px 40px -12px rgba(11, 35, 75, 0.06)",
+        "hover": "0 30px 60px -12px rgba(11, 35, 75, 0.12)"
+      },
+      "borders": { "thickness": "1px", "colorRange": "brand.gray at 10-30%", "hoverColor": "shift toward brand.navy or brand.gold" },
+      "radii": { "pill": "full", "surfaces": "12-20px", "icons": "soft circles/squares" }
+    },
+    "motion": {
+      "durations": "300-700ms ease",
+      "reveals": "opacity + translate-y",
+      "keyframes": ["float-slow", "glow-soft", "caret-blink"],
+      "reducedMotion": "disable non-essential animations"
+    },
+    "cssVariables": [
+      "--font-family-heading: 'Technor', 'Supreme', sans-serif",
+      "--font-family-body: 'Supreme', system-ui, -apple-system, 'Segoe UI', sans-serif",
+      "--color-brand-navy: #0b234b",
+      "--color-brand-gold: #e0b344",
+      "--color-brand-white: #f5f5f5",
+      "--color-brand-surface: #ffffff",
+      "--color-brand-gray: #b8b8b8",
+      "--color-text-secondary: #4f596d",
+      "--shadow-premium: 0 20px 40px -12px rgba(11, 35, 75, 0.06)",
+      "--shadow-premium-hover: 0 30px 60px -12px rgba(11, 35, 75, 0.12)"
+    ]
+  },
+  "layout": {
+    "container": { "maxWidth": "max-w-7xl", "padding": { "mobile": "px-6", "desktop": "px-12" } },
+    "verticalRhythm": { "hero": ["pt-32 pb-20", "desktop: pt-48 pb-32"], "sections": "py-24-32", "headerToContentGap": "24-32px" },
+    "grid": { "mobile": "single column", "desktop": "2-3 columns", "gaps": "gap-6/8" },
+    "backgrounds": { "primary": "#f5f5f5", "alternate": "#ffffff", "decorativeGlows": "subtle gold/navy blurs at low opacity" }
+  },
+  "components": {
+    "navigation": {
+      "style": "fixed, transparent to glass blur on scroll, subtle shadow",
+      "layout": "logo left, links spaced 10-12px, pill CTA right",
+      "mobile": "full-screen drawer with stacked links"
+    },
+    "hero": {
+      "headline": "centered, typing effect with blinking caret in brand navy",
+      "ctaPrimary": { "style": "pill", "bg": "brand.navy", "text": "white", "padding": "px-8 py-4", "hover": "translate-y -0.5, shadow-premium-hover, gold icon" },
+      "ctaSecondary": { "style": "outline navy", "hover": "fill brand-navy/5" },
+      "visuals": "subtle gold glow and light grid/automation wiring motifs"
+    },
+    "cards": {
+      "base": "white surface, rounded-2xl, border brand-gray/20, shadow-premium",
+      "hover": "shadow-premium-hover, border shifts toward navy/gold, slight lift",
+      "icons": "48-56px tiles, bg brand-navy/5 or white with thin border, Lucide/SVG icons"
+    },
+    "lists": {
+      "checkStyle": "small circle with gold/navy fill and Lucide check (12-14px)",
+      "text": "text-brand-navy/80 at text-sm/base with relaxed leading"
+    },
+    "buttons": {
+      "primary": "navy pill with white text; gold accent on hover",
+      "ghost": "transparent with navy border or brand-navy/5 fill",
+      "links": "navy text; hover to gold; underline only on hover"
+    },
+    "forms": {
+      "containers": "white, rounded-xl, border brand-gray/20, generous padding",
+      "inputs": "min-height 44px, rounded-lg, border brand-gray/20, focus ring in brand.navy with gold accents",
+      "helper": "text-brand-gray at text-sm"
+    },
+    "sections": {
+      "services": "three-card grid, icon squares, tight headings, divider in header",
+      "features": "alternating two-column image/text, badge with gold border above headings",
+      "portfolio": "image cards with slight grayscale, fade overlay, hover lift; gold category tag",
+      "testimonials": "white bordered card with premium shadow for embeds",
+      "courses": "card grid, price pill on image, text stack below",
+      "newsletter": "gold pill label, centered headline, embed inside bordered shell",
+      "contact": "white container around calendar embed, consistent with form shells",
+      "social": "glassy white card on blurred gold/navy glows, stacked link buttons with navy borders"
+    },
+    "footer": {
+      "cta": "final CTA with navy primary button and outline secondary",
+      "bottom": "thin top border row, gray tertiary links that lift to navy on hover"
+    }
+  },
+  "imagery": {
+    "icons": { "set": "Lucide", "stroke": "1.5-1.6", "color": "navy/gray", "size": "16-22px" },
+    "photos": { "treatment": "mix-blend-multiply at 80-90% opacity, subtle zoom on hover" },
+    "backgrounds": { "motifs": "light grids (brand-gray/08), soft circles, dashed connectors in gold/navy to imply systems" }
+  },
+  "accessibility": {
+    "contrast": "Use navy text on light surfaces to meet 4.5:1; avoid gold for main body text",
+    "focus": "Visible navy or gold outlines even on pill buttons",
+    "selection": "navy background with white text",
+    "motion": "Honor prefers-reduced-motion; avoid mandatory animations in critical flows"
+  },
+  "implementation": {
+    "tailwind": {
+      "extends": ["colors.brand.*", "fontFamily.sans", "fontFamily.heading", "boxShadow.premium"],
+      "contentGlobs": ["index.html", "index.tsx", "App.tsx", "components/**/*.{ts,tsx}", "hooks/**/*.{ts,tsx}"]
+    },
+    "scrollbar": { "track": "brand.white", "thumb": "brand.gray", "hoverThumb": "brand.navy" },
+    "coreTrio": "max-w-7xl container + rounded-2xl cards + shadow-premium for any new page"
+  }
+}
