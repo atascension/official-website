@@ -77,7 +77,7 @@ const HeroSection: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-gold/40 bg-brand-gold/10 mb-8">
             <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse" />
             <span className="text-xs font-semibold text-brand-gold tracking-widest uppercase">
-              Free Live Webinar — March 18, 2026
+              Free Live Webinar - March 18, 2026
             </span>
           </div>
         </div>
@@ -99,7 +99,7 @@ const HeroSection: React.FC = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          Learn how to build professional, client-ready websites using AI — faster than ever before.
+          Learn how to build professional, client-ready websites using AI, faster than ever before.
           Join us live and walk away with a repeatable system you can use immediately.
         </p>
 
@@ -161,19 +161,19 @@ const STEPS = [
     number: '03',
     title: 'Generate the First Version of Your Website',
     description:
-      'Watch your website come to life in seconds — real pages, real copy, real design. You\'ll have a working first draft before most people finish writing a brief.',
+      'Watch your website come to life in seconds: real pages, real copy, real design. You\'ll have a working first draft before most people finish writing a brief.',
   },
   {
     number: '04',
     title: 'Review, Refine, and Iterate Section by Section',
     description:
-      'Go through your site piece by piece and dial it in. You\'ll know exactly what to adjust and how to guide AI to get it right — no guessing, no wasted revisions.',
+      'Go through your site piece by piece and dial it in. You\'ll know exactly what to adjust and how to guide AI to get it right. No guessing, no wasted revisions.',
   },
   {
     number: '05',
     title: 'Deploy Your Website',
     description:
-      'Take your finished site live with a few clicks. Professional, polished, and ready to bring in customers — without touching a line of code.',
+      'Take your finished site live with a few clicks. Professional, polished, and ready to bring in customers, without touching a line of code.',
   },
 ];
 
@@ -193,10 +193,10 @@ const WhatYoullLearnSection: React.FC = () => {
             </span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white font-semibold tracking-tight leading-tight">
-            From Idea to Live Website —<br className="hidden sm:block" /> Five Steps, Zero Code
+            From Idea to Live Website:<br className="hidden sm:block" /> Five Steps, Zero Code
           </h2>
           <p className="mt-4 text-base sm:text-lg text-white max-w-xl mx-auto leading-relaxed">
-            No developers. No design tools. No months of back-and-forth. Just a clear system that takes you from blank page to live site — and we walk through every step together.
+            No developers. No design tools. No months of back-and-forth. Just a clear system that takes you from blank page to live site, and we walk through every step together.
           </p>
         </div>
 
@@ -297,7 +297,7 @@ const RegisterSection: React.FC = () => {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-gold/40 bg-brand-gold/10 mb-8">
           <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse" />
           <span className="text-xs font-semibold text-brand-gold tracking-widest uppercase">
-            Free Registration — March 18, 2026
+            Free Registration - March 18, 2026
           </span>
         </div>
 
@@ -305,11 +305,11 @@ const RegisterSection: React.FC = () => {
           Ready to Build Smarter?
         </h2>
         <p className="text-white text-base sm:text-lg leading-relaxed mb-10">
-          Secure your free spot today. Seats are limited — don't miss your chance to get the
+          Secure your free spot today. Seats are limited, so don't miss your chance to get the
           complete 5-step system live.
         </p>
 
-        {/* Placeholder CTA — swap href with your real registration link */}
+        {/* Placeholder CTA - swap href with your real registration link */}
         <a
           href="#"
           aria-label="Reserve your free webinar spot (registration link coming soon)"
