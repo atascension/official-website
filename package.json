@@ -1,6 +1,6 @@
 {
   "name": "architech-ascension",
-  "homepage": "https://atascension.github.io/official-website/",
+  "homepage": "https://atascension.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "VITE_BASE_PATH=/official-website/ npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

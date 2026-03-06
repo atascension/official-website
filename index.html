@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // Restore path redirected by 404.html (GitHub Pages SPA fallback)
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get('p');
+        if (p) {
+          params.delete('p');
+          var qs = params.toString();
+          window.history.replaceState(
+            null, null,
+            p + (qs ? '?' + qs : '') + window.location.hash
+          );
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
