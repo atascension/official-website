@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // Restore path redirected by 404.html (GitHub Pages SPA fallback)
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get('p');
+        if (p) {
+          params.delete('p');
+          var qs = params.toString();
+          window.history.replaceState(
+            null, null,
+            p + (qs ? '?' + qs : '') + window.location.hash
+          );
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -19,8 +34,8 @@
     <meta name="twitter:title" content="Architech Ascension" />
     <meta name="twitter:description" content="Digital builds, AI automations, and launch support to ship what you imagine." />
     <meta name="twitter:image" content="https://atascension.com/img/Logo-WhiteBG.png" />
-    <script type="module" crossorigin src="/official-website/assets/index-BHvhha0s.js"></script>
-    <link rel="stylesheet" crossorigin href="/official-website/assets/index--qItDCtC.css">
+    <script type="module" crossorigin src="/assets/index-CAMSzz2T.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DJEPy3OQ.css">
   </head>
   <body>
     <div id="root"></div>
