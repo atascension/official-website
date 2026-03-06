@@ -14,10 +14,6 @@ export default defineConfig(({ mode }) => {
       //   GitHub Pages subdirectory: VITE_BASE_PATH=/Updated-Website-Design/ npm run build
       //   Custom domain (atascension.com): omit env var (defaults to '/')
       base: env.VITE_BASE_PATH || '/',
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
