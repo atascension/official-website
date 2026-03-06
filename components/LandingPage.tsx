@@ -41,7 +41,7 @@ const HeroSection: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 mb-6">
                 <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                 <span className="text-xs font-semibold text-brand-navy tracking-wider uppercase">
-                  Web Developer &amp; AI Educator
+                  AI Consultant &amp; Educator
                 </span>
               </div>
             </div>
@@ -52,8 +52,8 @@ const HeroSection: React.FC = () => {
               }`}
               style={{ transitionDelay: isVisible ? '100ms' : '0ms' }}
             >
-              Establishing Your Online <span className="text-brand-gold">Presence</span>{' '}
-              While Equipping You for the <span className="text-brand-gold">Future</span>
+              Put <span className="text-brand-gold">AI</span> to{' '}
+              <span className="text-brand-gold">Work</span> in Your Business. Skip the Trial and Error.
             </h1>
 
             <p
@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
               }`}
               style={{ transitionDelay: isVisible ? '220ms' : '0ms' }}
             >
-              Whether you need a professional website built for your business or you're ready to learn how to use AI as an entrepreneur, I offer hands-on help that gets real results. Let's start with a free call.
+              I help business owners figure out where AI actually fits, build it into their workflow, and train their teams to use it day to day. Start with a free call.
             </p>
 
             <div
@@ -76,7 +76,7 @@ const HeroSection: React.FC = () => {
                   onClick={() => scrollToSection('connect')}
                   className="px-8 py-4 bg-brand-navy text-white rounded-full font-semibold shadow-premium hover:shadow-premium-hover hover:bg-opacity-95 transition-all transform hover:-translate-y-1 text-center inline-flex items-center justify-center gap-2"
                 >
-                  Book My Free Strategy Call
+                  Book My Free Discovery Call
                   <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </button>
                 <button
@@ -88,7 +88,7 @@ const HeroSection: React.FC = () => {
                 </button>
               </div>
               <p className="font-sans text-xs text-brand-navy/45 mt-4 tracking-wide">
-                No pitch &nbsp;·&nbsp; 30 minutes &nbsp;·&nbsp; Completely free
+                No sales pitch &nbsp;·&nbsp; 30 minutes &nbsp;·&nbsp; Free
               </p>
             </div>
           </div>
@@ -121,19 +121,27 @@ const SolutionsSection: React.FC = () => {
   const cards = [
     {
       eyebrow: 'Done For You',
-      heading: 'Website Design & Development',
-      body: 'I design and build professional, high-converting websites from scratch, tailored to your brand and optimized to turn visitors into clients. No templates. No handoffs to a team you\'ve never met.',
-      tags: ['Web Design', 'Custom Development', 'Conversion Optimization'],
-      cta: 'Start My Website Project',
+      heading: 'AI Implementation Consulting',
+      body: 'Not sure where AI fits in your business? I come in, map your operations, and identify exactly where AI can save time, cut costs, or open up new revenue. Then I build it. No wasted budget, no buzzwords.',
+      tags: ['Process Audits', 'Tool Selection', 'AI Integration'],
+      cta: 'Book a Discovery Call',
       ctaAction: () => scrollToSection('connect'),
     },
     {
       eyebrow: 'Done With You',
-      heading: 'AI Consulting & Education',
-      body: 'Want to build and grow your business with AI but don\'t know where to start? I offer one-on-one consulting and training sessions that give you real, usable skills, not theory.',
-      tags: ['1-on-1 Consulting', 'AI Tools Training', 'Practical Workshops'],
-      cta: 'Book an AI Session',
+      heading: 'AI Training & Workshops',
+      body: 'Want to understand AI well enough to use it yourself? I run live workshops and one-on-one sessions that give you hands-on experience with the tools that actually matter for your business. Not a 60-slide deck.',
+      tags: ['Live Workshops', '1-on-1 Training', 'Custom Team Training'],
+      cta: 'Book a Workshop',
       ctaAction: () => scrollToSection('connect'),
+    },
+    {
+      eyebrow: 'Learn On Your Own Time',
+      heading: 'Self-Paced AI Courses',
+      body: 'Not ready for a live session? My courses walk you through the same tools and frameworks I use with consulting clients, at your own pace and on your own schedule.',
+      tags: ['Video Lessons', 'Step-by-Step Modules', 'Lifetime Access'],
+      cta: 'Browse Courses',
+      ctaAction: () => window.open('https://architech-ascension.kit.com/products/idea-to-execution', '_blank'),
     },
   ];
 
@@ -152,15 +160,15 @@ const SolutionsSection: React.FC = () => {
             What I Do
           </p>
           <h2 className="font-heading text-3xl md:text-4xl text-brand-navy font-semibold tracking-tight mb-4">
-            Two Ways I Can Help Your Business
+            Three Ways to Bring AI Into Your Business
           </h2>
           <p className="font-sans text-base md:text-lg text-brand-navy/70 max-w-2xl">
-            Whether you want it done for you or want to learn to do it yourself, there's a clear path forward.
+            Whether you want me to build it for you or want to learn to do it yourself, there's a path that fits.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((card, i) => (
             <div
               key={i}
@@ -213,23 +221,23 @@ const BenefitsSection: React.FC = () => {
   const benefits = [
     {
       number: '01',
-      heading: 'Custom, Not Cookie-Cutter',
-      body: 'Every website I build starts with understanding your business, your audience, and your goals, not a template dropped into a drag-and-drop editor.',
+      heading: 'A Real Plan, Not a Pitch',
+      body: 'Before I recommend anything, I learn your business. The tools I suggest are ones that fit what you\'re already doing, not whatever\'s trending on social media.',
     },
     {
       number: '02',
-      heading: 'Practical AI Skills You\'ll Actually Use',
-      body: 'My consulting sessions are hands-on. You walk away knowing how to use AI tools in your workflow, not just what AI is.',
+      heading: 'You\'ll Know How to Use What We Build',
+      body: 'I don\'t hand over a system and walk away. You or your team will understand what was built, why it was built, and how to keep it running.',
     },
     {
       number: '03',
-      heading: 'One Person, Full Stack',
-      body: 'You work directly with me from first call to final launch. No account managers, no outsourcing. You always know who\'s responsible.',
+      heading: 'One Person Who Sees the Whole Picture',
+      body: 'You work directly with me, not a rotating team of contractors. I keep track of where we started, where we are, and what comes next.',
     },
     {
       number: '04',
-      heading: 'It Starts with a Conversation',
-      body: 'I don\'t do one-size-fits-all pricing or proposals. Every engagement starts with a free call so I can understand what you actually need.',
+      heading: 'Results That Show Up at Work, Not in Reports',
+      body: 'The goal isn\'t an impressive dashboard. It\'s time saved, costs cut, or revenue that didn\'t exist before. That\'s how I measure a good engagement.',
     },
   ];
 
@@ -245,10 +253,10 @@ const BenefitsSection: React.FC = () => {
           }`}
         >
           <h2 className="font-heading text-3xl md:text-4xl text-brand-navy font-semibold tracking-tight mb-4">
-            Why Work with Me
+            What You Get with Architech Ascension
           </h2>
           <p className="font-sans text-base md:text-lg text-brand-navy/70 max-w-2xl">
-            You get one person who knows both web development and AI inside out. No project managers, no middlemen.
+            Here's what working with me actually looks like.
           </p>
         </div>
 
@@ -287,23 +295,23 @@ const HowItWorksSection: React.FC = () => {
   const steps = [
     {
       step: '01',
-      heading: 'Book a Free Call',
-      body: 'We talk through what you\'re building, what you need, and what success looks like. No pitch. No pressure.',
+      heading: 'Discovery Call',
+      body: 'We spend 30 minutes on your business, your goals, and where you think AI could help. I\'ll tell you honestly what\'s worth pursuing.',
     },
     {
       step: '02',
-      heading: 'I Scope the Work',
-      body: 'Based on our call, I put together a clear proposal covering scope, timeline, and investment, so there are no surprises.',
+      heading: 'Project Kickoff',
+      body: 'Once you decide to move forward, we map out the full scope: what we\'re building, the order we\'re doing it in, and what success looks like.',
     },
     {
       step: '03',
-      heading: 'We Build or Learn Together',
-      body: 'For web projects: I design, build, and keep you in the loop at every milestone. For consulting: we work through your goals session by session.',
+      heading: 'Development',
+      body: 'I build and integrate your AI systems, keeping you in the loop at every stage. No black boxes. You know what\'s happening and why.',
     },
     {
       step: '04',
-      heading: 'You Launch with Confidence',
-      body: 'Your site goes live (and I stick around for support), or you finish your consulting journey with skills you can use immediately.',
+      heading: 'Launch & Testing',
+      body: 'Before anything goes live, we test against real scenarios from your business. Then we launch, review results, and make sure it\'s working the way it should.',
     },
   ];
 
@@ -322,10 +330,10 @@ const HowItWorksSection: React.FC = () => {
             The Process
           </p>
           <h2 className="font-heading text-3xl md:text-4xl text-brand-navy font-semibold tracking-tight mb-4">
-            How We Get Started
+            From First Call to Full Launch
           </h2>
           <p className="font-sans text-base md:text-lg text-brand-navy/70 max-w-2xl">
-            A simple, clear process, whether you're here for a website or for AI consulting.
+            Four steps. No guesswork.
           </p>
         </div>
 
@@ -371,10 +379,10 @@ const HowItWorksSection: React.FC = () => {
             className="px-8 py-4 bg-brand-navy text-white rounded-full font-semibold shadow-premium hover:shadow-premium-hover hover:bg-opacity-95 transition-all transform hover:-translate-y-1 inline-flex items-center gap-2.5"
           >
             <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="12" rx="2" stroke="currentColor" strokeWidth="1.4"/><path d="M1 7h14M5 1v4M11 1v4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg>
-            Claim My Free Call
+            Book My Discovery Call
           </button>
           <p className="font-sans text-xs text-brand-navy/45 mt-3 tracking-wide">
-            30 minutes to get the ball rolling
+            Free &nbsp;·&nbsp; 30 minutes &nbsp;·&nbsp; No commitment
           </p>
         </div>
       </div>
@@ -417,10 +425,10 @@ const TestimonialsSection: React.FC = () => {
             Client Results
           </p>
           <h2 className="font-heading text-3xl md:text-4xl text-brand-navy font-semibold tracking-tight mb-4">
-            Real Results from Real Clients
+            What Clients Have Said
           </h2>
           <p className="font-sans text-base md:text-lg text-brand-navy/70 max-w-2xl">
-            Don't take my word for it. Here's what the people I've worked with have to say.
+            A few words from people I've worked with.
           </p>
         </div>
 
@@ -487,12 +495,9 @@ const ConnectSection: React.FC = () => {
           }`}
         >
           <div>
-            <h2 className="font-heading text-4xl md:text-5xl text-brand-navy font-semibold tracking-tight leading-tight mb-4">
-              Book a Free Call
+            <h2 className="font-heading text-4xl md:text-5xl text-brand-navy font-semibold tracking-tight leading-tight">
+              Book Your Free Discovery Call.
             </h2>
-            <p className="font-sans text-base md:text-lg text-brand-navy/70 max-w-xl">
-              Tell me what you're working on. We'll figure out the best way I can help.
-            </p>
           </div>
         </div>
 
