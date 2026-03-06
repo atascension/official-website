@@ -1,0 +1,17 @@
+<Files ".htaccess">
+Order Allow,Deny
+Deny from all
+</Files>
+
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+
+# Serve existing files/directories normally
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# SPA fallback: everything else goes to index.html
+RewriteRule . /index.html [L]
