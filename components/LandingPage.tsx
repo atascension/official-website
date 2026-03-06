@@ -95,7 +95,7 @@ const HeroSection: React.FC = () => {
 
           {/* Right - Visual */}
           <div
-            className={`transition-all duration-700 delay-200 relative flex justify-center items-end self-stretch min-h-[480px] ${
+            className={`transition-all duration-700 delay-200 relative flex justify-center items-end self-stretch min-h-[280px] sm:min-h-[360px] lg:min-h-[480px] ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
