@@ -53,7 +53,7 @@ const HeroSection: React.FC = () => {
               style={{ transitionDelay: isVisible ? '100ms' : '0ms' }}
             >
               Put <span className="text-brand-gold">AI</span> to{' '}
-              <span className="text-brand-gold">Work</span> in Your Business. Skip the Trial and Error.
+              <span className="text-brand-navy">Work</span> in Your Business. Skip the Trial and Error.
             </h1>
 
             <p
