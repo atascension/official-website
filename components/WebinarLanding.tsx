@@ -499,7 +499,7 @@ const DELIVERABLES = [
       </svg>
     ),
     title: 'Full Live Training Session',
-    description: 'A 90-minute live walkthrough of the complete 5-step AI website building framework, from defining your vision to going live.',
+    description: 'A 90-minute live walkthrough of the 5-step AI website building framework, from defining your vision to going live.',
   },
   {
     icon: (
@@ -545,7 +545,7 @@ const WhatYouGetSection: React.FC = () => {
             </span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white font-semibold tracking-tight leading-tight">
-            Everything You Need to Build<br className="hidden sm:block" /> Your Website in One Session
+            Your Foundation for Building<br className="hidden sm:block" /> a Website With AI
           </h2>
           <p className="mt-4 text-base sm:text-lg text-white max-w-xl mx-auto leading-relaxed">
             This isn't a 30-second highlight reel. It's a complete, hands-on training that gives you the framework, the tools, and the confidence to take action.
@@ -574,7 +574,7 @@ const WhatYouGetSection: React.FC = () => {
         <div className={`mt-10 rounded-2xl bg-brand-gold text-brand-navy p-7 md:p-10 text-center transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <p className="font-heading text-xl sm:text-2xl font-semibold leading-snug">
             People pay hundreds of dollars for courses that teach parts of this.<br className="hidden sm:block" />
-            You're getting the full framework, live, for free.
+            You're getting a proven starting framework to go from idea to live site, delivered live, for free.
           </p>
           <p className="mt-3 text-brand-navy/70 text-sm">March 18, 2026 &bull; 12:00 PM ET &bull; One Live Session Only</p>
         </div>
@@ -725,7 +725,7 @@ const FAQS = [
   },
   {
     q: 'What AI tools will we be using?',
-    a: 'We\'ll use widely available AI tools that are either free or have a generous free tier. You don\'t need to purchase any software before attending.',
+    a: 'We\'ll be working with popular AI tools including Cursor, Lovable, and Claude Code. No setup is required before attending.',
   },
   {
     q: 'How long is the webinar?',
@@ -737,7 +737,7 @@ const FAQS = [
   },
   {
     q: 'Is this actually free? What\'s the catch?',
-    a: 'Yes, completely free. No hidden costs, no surprise upsells during the webinar, and no credit card required to register. We built this because we believe more people deserve access to this kind of practical, applicable training.',
+    a: 'Yes, completely free to attend. No credit card required to register. The training itself is straightforward and practical.',
   },
   {
     q: 'I already have a website. Is this still worth attending?',
@@ -844,7 +844,7 @@ const RegisterSection: React.FC = () => {
         </p>
 
         <p className="text-white text-base sm:text-lg leading-relaxed mb-10 font-medium">
-          March 18 is your line in the sand. One free session. One complete framework. One clear next step.
+          March 18 is your line in the sand. One free session. One clear starting framework. One concrete next step.
         </p>
 
         {/* Trust checklist */}
